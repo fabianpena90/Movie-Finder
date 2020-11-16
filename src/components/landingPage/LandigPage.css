@@ -1,0 +1,18 @@
+.ui.fluid.image {
+  position: fixed;
+  background-position: center center/cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  z-index: -1;
+}
+
+h1 {
+  text-align: center;
+  margin:0;
+}
+
+.btn-group {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}

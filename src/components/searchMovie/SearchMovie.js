@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import axios from 'axios';
+import './SearchMovie.css'
 
 function SearchMovie(props) {
   const [ searchMovie, setSearchMovie ] = useState([])
@@ -19,11 +20,12 @@ function SearchMovie(props) {
   
 
   return (
-    <div class="ui fluid icon input">
-      <input type="text" onChange={getMovie} placeholder="Movies"/>
-      <button onClick={renderSearchMovie} class="ui right floated button">Search</button>
+    <div class="ui action input">
+      <input className="input-search" type="text" onChange={getMovie} placeholder="Movies"/>
+      <button onClick={renderSearchMovie} class="ui button">Search</button>
     </div>
   );
 }
 
 export default SearchMovie;
+

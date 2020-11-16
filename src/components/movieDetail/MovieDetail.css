@@ -1,0 +1,31 @@
+.ui.container {
+  margin-top: 40px;
+}
+
+.img-poster {
+  padding: 0 40px;
+}
+
+.l-header {
+  font-size: 3rem;
+}
+
+.genres-description{
+  display: inline-block;
+  border: 0px solid transparent;
+  padding: 5px 20px;
+  border-radius: 10px;
+  background-color: #e8e8e8;
+  color: rgba(0,0,0,.6);
+  line-height: 1;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.genres-description p {
+  font-size: 1.1rem;
+}
+
+.movie-description {
+  font-size: 1.2rem;
+}
