@@ -1,14 +1,8 @@
 import React from "react";
 import { Rating } from "semantic-ui-react";
 
-const Ratings = (number) => (
-  <Rating
-    icon="star"
-    defaultRating={number}
-    maxRating={5}
-    size="huge"
-    // disabled
-  />
+const Ratings = (props) => (
+  <Rating icon="star" defaultRating={4.5} maxRating={5} size="huge" disabled />
 );
 
 export default Ratings;

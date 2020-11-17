@@ -126,9 +126,6 @@ function MovieDetail(props) {
           </div>
         </div>
       </div>
-      <Link to="/ratedMovies">
-        <button className="ui yellow button btn">Back</button>
-      </Link>
     </div>
   );
 }

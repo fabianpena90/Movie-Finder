@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Ratings from "../Ratings/Ratings";
 import { Link } from "react-router-dom";
+import "./RatedMovies.css";
 
 function RatedMovies(props) {
   const [ratedMovies, setRatedMovies] = useState([]);
@@ -27,19 +28,23 @@ function RatedMovies(props) {
 
   const singleMovie = ratedMovies.map((movieRate) => {
     return (
-      <div className="ui cards">
-        <div class="ui card">
-          <div class="image">
+      <div className="rated-card">
+        <div>
+          <div>
             <img
+              className="movie-poster"
               src={`${url}w780${movieRate.poster_path}`}
               alt="Movie Poster"
             />
           </div>
-          <div class="content">
-            <div class="header">{movieRate.title}</div>
+          <div className="content">
+            <h3>{movieRate.title}</h3>
           </div>
-          <div class="extra content">
-            <Ratings defaultRating={movieRate.vote_average / 2} />
+          <div>
+            <Ratings
+              className="rating"
+              defaultRating={movieRate.vote_average / 2}
+            />
           </div>
           <Link to={`/ratedMovies/${movieRate.id}`}>More info...</Link>
         </div>
@@ -47,7 +52,17 @@ function RatedMovies(props) {
     );
   });
 
-  return <div>{singleMovie}</div>;
+  return (
+    <div className="ui container">
+      <div className="l-heading">
+        <Link to="/">
+          <button class="ui right floated button">Back</button>
+        </Link>
+        <h1>Top Rated Movies</h1>
+      </div>
+      {singleMovie}
+    </div>
+  );
 }
 
 export default RatedMovies;

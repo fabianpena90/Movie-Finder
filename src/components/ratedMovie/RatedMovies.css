@@ -1,0 +1,31 @@
+.rated-card {
+  display: inline-flex;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  transition:all 0.5s ease;
+}
+
+.rated-card:hover {
+  transform:scale(1.1);
+}
+
+.movie-poster {
+  width: 280px;
+  border-radius: 10px;
+}
+
+.movie-poster:hover {
+  box-shadow: 0 0 10px;
+}
+
+.content h3{
+  padding-bottom: 10px;
+}
+
+.rating {
+  padding-bottom: 10px;
+}
+
+.l-heading {
+  margin-bottom: 40px;
+}
