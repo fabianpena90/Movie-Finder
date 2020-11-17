@@ -1,13 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import SearchMovie from '../searchMovie/SearchMovie'
-import './LandigPage.css'
+import React from "react";
+import { Link } from "react-router-dom";
+import SearchMovie from "../searchMovie/SearchMovie";
+import "./LandigPage.css";
 
 function LandingPage(props) {
   return (
-    <div>
+    <div className="container">
       <h1>Welcome to Movie Finder</h1>
-      <img className="ui fluid image" src='img/cinema.png' alt='backgroundcinema'/>
       <SearchMovie />
       <div className="btn-group">
         <Link to="/ratedMovies">

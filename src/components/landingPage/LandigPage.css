@@ -1,14 +1,17 @@
-.ui.fluid.image {
-  position: fixed;
-  background-position: center center/cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  z-index: -1;
+.container {
+  /* background: url('/img/cinema.png'); */
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
 h1 {
   text-align: center;
-  margin:0;
+  padding: 60px;
 }
 
 .btn-group {
