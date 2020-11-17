@@ -84,7 +84,7 @@ function MovieDetail(props) {
         <div className="item">
           <div className="img-poster">
             <img
-              className="ui massive image"
+              className="ui large image"
               src={`${url}w780${movieDetail.poster_path}`}
               alt="Movie Poster"
             />

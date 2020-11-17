@@ -1,8 +1,4 @@
 .container {
-  /* background: url('/img/cinema.png'); */
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -11,11 +7,34 @@
 
 h1 {
   text-align: center;
-  padding: 60px;
+	padding: 60px;
+	color: #cbffe8;
+	text-shadow: 
+    0 0 5px rgb(160, 54, 163),
+    0 0 10px rgb(160, 54, 163),
+    0 0 20px rgb(160, 54, 163),
+    0 0 40px rgb(160, 54, 163),
+    0 0 80px rgb(160, 54, 163),
+    0 0 90px rgb(160, 54, 163),
+    0 0 100px rgb(160, 54, 163);
+	font-size: 4rem !important;
 }
 
-.btn-group {
-  padding-top: 20px;
-  display: flex;
-  justify-content: space-around;
+.cinema-bg {
+	/* background-position: center; */
+	/* background-size: cover; */
+	background-repeat: no-repeat;
+	width: 100vw;
+	height: auto;
+}
+
+.home-content {
+	position: absolute;
+	top: 30%;
+}
+
+.group-btn {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }

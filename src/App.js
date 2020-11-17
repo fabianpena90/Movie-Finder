@@ -6,6 +6,7 @@ import PopularMovies from "./components/popularMovies/PopularMovies";
 import NowPlayingMovies from "./components/nowPlaying/NowPlayingMovies";
 import UpcomingMovies from "./components/upcomingMovies/UpcomingMovies";
 import MovieDetail from "./components/movieDetail/MovieDetail";
+// import SearchMovie from "./components/searchMovie/SearchMovie";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route exact path="/popularMovies" component={PopularMovies} />
         <Route exact path="/nowPlaying" component={NowPlayingMovies} />
         <Route exact path="/upcomingMovies" component={UpcomingMovies} />
+        <Route exact path="/searchMovie" />
         <Route
           exact
           path="/ratedMovies/:id"
