@@ -2,18 +2,20 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Ratings from "../Ratings/Ratings";
 import { Link } from "react-router-dom";
+import { Pagination } from "semantic-ui-react";
 import "./RatedMovies.css";
 
 function RatedMovies(props) {
   const [ratedMovies, setRatedMovies] = useState([]);
   const [url, setUrl] = useState();
+  const [page, setPage] = useState(1);
 
   const key = process.env.REACT_APP_MOVIE_KEY;
 
   useEffect(() => {
     async function renderRatedMovies() {
       const res = await axios.get(
-        `https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=en-US&page=1`
+        `https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=en-US&page=${page}`
       );
       // console.log(res.data.results)
       setRatedMovies(res.data.results);
@@ -24,12 +26,13 @@ function RatedMovies(props) {
       setUrl(res2.data.images.secure_base_url);
     }
     renderRatedMovies();
-  }, []);
+  }, [page]);
 
   const singleMovie = ratedMovies.map((movieRate) => {
     return (
       <div className="rated-card">
-        <div>
+        <div className="rated-card-border">
+          <div>
           <div>
             <img
               className="movie-poster"
@@ -61,6 +64,13 @@ function RatedMovies(props) {
         <h1>Top Rated Movies</h1>
       </div>
       {singleMovie}
+      <div className="pagination">
+        <Pagination
+          onPageChange={(e) => setPage(e.target.outerText)}
+          defaultActivePage={page}
+          totalPages={20}
+        />
+      </div>
     </div>
   );
 }

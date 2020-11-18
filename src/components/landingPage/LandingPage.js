@@ -12,35 +12,23 @@ function LandingPage(props) {
         {/* <SearchMovie /> */}
         <div className="group-btn">
           <Link to="/ratedMovies">
-            <button class="ui blue animated button">
-              <div class="visible content">Top Rated Movies</div>
-              <div class="hidden content">
-                <i aria-hidden="true" class="video icon"></i>
-              </div>
+            <button class="btn-landing">
+              <h3 className="h3-landing">Top Rated Movies</h3>
             </button>
           </Link>
           <Link to="/popularMovies">
-            <button class="ui blue animated button">
-              <div class="visible content">Popular Movies</div>
-              <div class="hidden content">
-                <i aria-hidden="true" class="video icon"></i>
-              </div>
+            <button class="btn-landing">
+              <h3 className="h3-landing">Popular Movies</h3>
             </button>
           </Link>
           <Link to="/nowPlaying">
-            <button class="ui blue animated button">
-              <div class="visible content">Now Playing</div>
-              <div class="hidden content">
-                <i aria-hidden="true" class="video icon"></i>
-              </div>
+            <button class="btn-landing">
+              <h3 className="h3-landing">Now Playing</h3>
             </button>
           </Link>
           <Link to="/upcomingMovies">
-            <button class="ui blue animated button">
-              <div class="visible content">Upcoming Movies</div>
-              <div class="hidden content">
-                <i aria-hidden="true" class="video icon"></i>
-              </div>
+            <button class="btn-landing">
+              <h3 className="h3-landing">Upcoming Movies</h3>
             </button>
           </Link>
         </div>

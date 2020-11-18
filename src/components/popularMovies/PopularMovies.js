@@ -2,10 +2,13 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Ratings from "../Ratings/Ratings";
+import { Pagination } from "semantic-ui-react";
+import "./PopularMovies.css";
 
 function PopularMovies(props) {
   const [popularMovies, setPopularMovies] = useState([]);
   const [url, setUrl] = useState();
+  const [page, setPage] = useState(1);
 
   const key = process.env.REACT_APP_MOVIE_KEY;
 
@@ -60,6 +63,13 @@ function PopularMovies(props) {
         <h1>Popular Movies</h1>
       </div>
       {singleMovie}
+      <div className="pagination">
+        <Pagination
+          onPageChange={(e) => setPage(e.target.outerText)}
+          defaultActivePage={page}
+          totalPages={20}
+        />
+      </div>
     </div>
   );
 }

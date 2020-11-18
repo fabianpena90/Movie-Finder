@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Ratings from "../Ratings/Ratings";
+import { Pagination } from "semantic-ui-react";
 
 function NowPlayingMovies(props) {
   const [nowPlayingMovies, setNowPlayingMovies] = useState([]);
   const [url, setUrl] = useState();
+  const [page, setPage] = useState(1);
 
   const key = process.env.REACT_APP_MOVIE_KEY;
 
@@ -23,7 +25,7 @@ function NowPlayingMovies(props) {
       setUrl(res2.data.images.secure_base_url);
     }
     renderNowPlayingMovies();
-  }, []);
+  }, [page]);
 
   const singleMovie = nowPlayingMovies.map((movieNow) => {
     return (
@@ -60,6 +62,13 @@ function NowPlayingMovies(props) {
         <h1>Now Playing</h1>
       </div>
       {singleMovie}
+      <div className="pagination">
+        <Pagination
+          onPageChange={(e) => setPage(e.target.outerText)}
+          defaultActivePage={page}
+          totalPages={20}
+        />
+      </div>
     </div>
   );
 }

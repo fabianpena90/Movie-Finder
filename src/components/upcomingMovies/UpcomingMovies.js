@@ -22,7 +22,7 @@ function UpcomingMovies(props) {
       setUrl(res2.data.images.secure_base_url);
     }
     renderUpcomingMovies();
-  }, []);
+  }, [page]);
 
   const singleMovie = upcomingMovies.map((movieComing) => {
     return (
@@ -59,6 +59,13 @@ function UpcomingMovies(props) {
         <h1>Upcoming Movies</h1>
       </div>
       {singleMovie}
+      <div className="pagination">
+        <Pagination
+          onPageChange={(e) => setPage(e.target.outerText)}
+          defaultActivePage={page}
+          totalPages={20}
+        />
+      </div>
     </div>
   );
 }

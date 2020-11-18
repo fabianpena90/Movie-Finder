@@ -57,10 +57,10 @@ function MovieDetail(props) {
       return null;
     }
     return (
-      <Link
+      <a
         key={movieDetail.id}
         target="_blank"
-        to={`https://www.imdb.com/title/${id}`}
+        href={`https://www.imdb.com/title/${id}`}
       >
         <button className="ui red button">IMDB</button>
       </Link>
@@ -72,7 +72,7 @@ function MovieDetail(props) {
       return null;
     }
     return (
-      <Link target="_blank" to={link}>
+      <a target="_blank" href={link}>
         <button className="ui blue button">Website</button>
       </Link>
     );
@@ -116,8 +116,8 @@ function MovieDetail(props) {
               </div>
               {renderWebsite(movieDetail.homepage)}
               {renderImdb(movieDetail.imdb_id)}
-              <Link
-                to={`https://www.youtube.com/embed/${video}`}
+              <a
+                href={`https://www.youtube.com/embed/${video}`}
                 target="_blank"
               >
                 <button className="ui purple button">Trailer</button>
