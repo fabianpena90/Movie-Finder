@@ -14,7 +14,7 @@ function NowPlayingMovies(props) {
   useEffect(() => {
     async function renderNowPlayingMovies() {
       let res = await axios.get(
-        `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}&language=en-US&page=1`
+        `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}&language=en-US&page=${page}`
       );
       console.log(res.data);
       setNowPlayingMovies(res.data.results);

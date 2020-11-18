@@ -63,7 +63,7 @@ function MovieDetail(props) {
         href={`https://www.imdb.com/title/${id}`}
       >
         <button className="ui red button">IMDB</button>
-      </Link>
+      </a>
     );
   }
 
@@ -74,7 +74,7 @@ function MovieDetail(props) {
     return (
       <a target="_blank" href={link}>
         <button className="ui blue button">Website</button>
-      </Link>
+      </a>
     );
   }
 
@@ -84,7 +84,7 @@ function MovieDetail(props) {
         <div className="item">
           <div className="img-poster">
             <img
-              className="ui large image"
+              className="ui huge image"
               src={`${url}w780${movieDetail.poster_path}`}
               alt="Movie Poster"
             />
@@ -121,7 +121,7 @@ function MovieDetail(props) {
                 target="_blank"
               >
                 <button className="ui purple button">Trailer</button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

@@ -15,7 +15,7 @@ function PopularMovies(props) {
   useEffect(() => {
     async function renderPopularMovies() {
       let res = await axios.get(
-        `https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=1`
+        `https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=${page}`
       );
       console.log(res.data);
       setPopularMovies(res.data.results);
@@ -26,7 +26,7 @@ function PopularMovies(props) {
       setUrl(res2.data.images.secure_base_url);
     }
     renderPopularMovies();
-  }, []);
+  }, [page]); // This is to re-render every single time the page is rendered
 
   const singleMovie = popularMovies.map((moviePopular) => {
     return (

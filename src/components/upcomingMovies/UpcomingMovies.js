@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Ratings from "../Ratings/Ratings";
 import { Link } from "react-router-dom";
+import Ratings from "../Ratings/Ratings";
+import { Pagination } from "semantic-ui-react";
 
 function UpcomingMovies(props) {
   const [upcomingMovies, setUpcomingMovies] = useState([]);
   const [url, setUrl] = useState();
+  const [page, setPage] = useState(1);
 
   const key = process.env.REACT_APP_MOVIE_KEY;
 
   useEffect(() => {
     async function renderUpcomingMovies() {
       const res = await axios.get(
-        `https://api.themoviedb.org/3/movie/upcoming?api_key=${key}&language=en-US&page=1`
+        `https://api.themoviedb.org/3/movie/upcoming?api_key=${key}&language=en-US&page=${page}`
       );
       setUpcomingMovies(res.data.results);
 
@@ -39,10 +41,7 @@ function UpcomingMovies(props) {
             <h3>{movieComing.title}</h3>
           </div>
           <div>
-            <Ratings
-              className="rating"
-              defaultRating={movieComing.vote_average / 2}
-            />
+            <Ratings className="rating" onRate={movieComing.vote_average / 2} />
           </div>
           <Link to={`/upcomingMovies/${movieComing.id}`}>More info...</Link>
         </div>

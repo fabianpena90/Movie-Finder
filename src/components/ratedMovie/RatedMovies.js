@@ -33,7 +33,6 @@ function RatedMovies(props) {
       <div className="rated-card">
         <div className="rated-card-border">
           <div>
-          <div>
             <img
               className="movie-poster"
               src={`${url}w780${movieRate.poster_path}`}
