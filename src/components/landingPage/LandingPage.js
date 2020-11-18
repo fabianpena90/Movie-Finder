@@ -33,6 +33,20 @@ function LandingPage(props) {
           </Link>
         </div>
       </div>
+      <div className="footer">
+        <footer>
+          Copyright &copy; Fabian Pena{" "}
+          <a href="https://github.com/fabianpena90">
+            <i class="github icon"></i>
+          </a>
+          <a href="https://www.buymeacoffee.com/fabianpena90">
+            <img
+              className="buy-coffee"
+              src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=fabianpena90&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
+            />
+          </a>
+        </footer>
+      </div>
     </div>
   );
 }

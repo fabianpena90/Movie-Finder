@@ -129,3 +129,26 @@ h1 {
     text-shadow: 0 0 15px rgb(230, 0, 120);
   }
 }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  line-height: 2.5em
+}
+
+.footer footer {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.footer i {
+  color: white;
+}
+
+.footer i:hover {
+  color: rgb(45, 60, 228);
+}
+
+.buy-coffee {
+  width: 100px;
+}
