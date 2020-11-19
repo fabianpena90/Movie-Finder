@@ -2,8 +2,7 @@
 
 [Check it live here!](https://the-movie-finder.netlify.app/)
 
-(/movies/cinema.png)
-![Alt Text](url)
+![](img/movieFinder.png)
 
 A Movie Library made with ReactJS using The Movie Database API
 
