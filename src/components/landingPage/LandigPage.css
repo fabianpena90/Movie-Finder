@@ -12,7 +12,7 @@
 
 .landing-header {
   text-align: center;
-	padding: 60px;
+	padding: 20px;
 	color: #cbffe8;
 	text-shadow: 
     0 0 5px rgb(160, 54, 163),
@@ -44,10 +44,9 @@
 }
 
 .h3-landing {
-  font-family: "Open Sans";
   font-weight: 300;
   font-size:1.5em;
-  margin: 15px 0 0;
+  margin: 10px 5px;
   color: rgba(120, 0, 50, .5);
 }
 
@@ -56,7 +55,8 @@
   border-radius: 8px;
   border: 3px solid rgb(0, 40, 70);
 	cursor: pointer;
-	padding: 5px 15px;
+  padding: 5px 15px;
+  margin: 0 20px;
 }
 
 .btn-landing:hover {
@@ -154,9 +154,30 @@
 }
 
 @media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 812px)
-and (-webkit-device-pixel-ratio : 3) { 
+and (min-device-width: 414px) 
+and (max-device-width: 736px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) { 
+  .home-content {
+    position: absolute;
+    top: 10%;
+  }
+
+  .landing-header {
+    text-align: center;
+    padding: 20px !important;
+    color: #cbffe8;
+    text-shadow: 
+      0 0 5px rgb(160, 54, 163),
+      0 0 10px rgb(160, 54, 163),
+      0 0 20px rgb(160, 54, 163),
+      0 0 40px rgb(160, 54, 163),
+      0 0 80px rgb(160, 54, 163),
+      0 0 90px rgb(160, 54, 163),
+      0 0 100px rgb(160, 54, 163);
+    font-size: 2rem !important;
+  }  
+
   .group-btn {
     display: flex;
     flex-direction: column;
@@ -168,8 +189,67 @@ and (-webkit-device-pixel-ratio : 3) {
     margin: 10px 0;
   }
 
+  .h3-landing {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
   .landing-header {
     font-size: 2.8rem !important;
     padding: 0px;
   }
+
+  .footer {
+   text-align: center;
+  }
+  .footer footer {
+    font-size: small;
+  }
+}
+
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    .landing-header {
+      text-align: center;
+      padding: 0px !important;
+      color: #cbffe8;
+      text-shadow: 
+        0 0 5px rgb(160, 54, 163),
+        0 0 10px rgb(160, 54, 163),
+        0 0 20px rgb(160, 54, 163),
+        0 0 40px rgb(160, 54, 163),
+        0 0 80px rgb(160, 54, 163),
+        0 0 90px rgb(160, 54, 163),
+        0 0 100px rgb(160, 54, 163);
+      font-size: 2rem !important;
+    }
+
+    .home-content {
+      position: absolute;
+      top: 10%;
+    }
+
+    .group-btn {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items:center;
+    }
+  
+    .btn-landing {
+      margin: 10px 10px;
+    }
+
+    .h3-landing {
+      font-size: 12px;
+      font-weight: bold;
+    }
+  
+    .landing-header {
+      font-size: 2.8rem !important;
+      padding: 0px;
+    }
 }
