@@ -1,15 +1,15 @@
-.popular-card {
+.now-card {
   padding: 40px;
   transition:all 0.5s ease;
   /* width: 30%; */
   cursor: pointer;
 }
 
-.popular-card:hover {
+.now-card:hover {
   transform:scale(1.1);
 }
 
-.popular-content {
+.now-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -19,7 +19,11 @@
   padding: 40px;
 }
 
-.popular-header {
+.content h3 {
+  text-align:justify;
+}
+
+.now-header {
   text-align: center;
 }
 

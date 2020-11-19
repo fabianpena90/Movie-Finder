@@ -79,17 +79,17 @@ function MovieDetail(props) {
   }
 
   return (
-    <div className="ui container">
+    <div className="movie-detail-content">
       <div key={movieDetail.id} className="ui divided items">
         <div className="item">
           <div className="img-poster">
             <img
-              className="ui huge image"
+              className="movie-detail-poster"
               src={`${url}w780${movieDetail.poster_path}`}
               alt="Movie Poster"
             />
           </div>
-          <div className="content">
+          <div className="content-detail">
             <h1 className="l-header">{movieDetail.title}</h1>
             <div className="meta">
               <span className="cinema">

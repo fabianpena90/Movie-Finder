@@ -1,9 +1,20 @@
+.rated-movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.rated-header {
+  text-align: center;
+}
+
 .rated-card {
   display: inline-flex;
   flex-wrap: wrap;
-  padding: 40px 40px;
+  padding: 10px;
   transition:all 0.5s ease;
-  width: 30%;
+  /* width: 400px; */
+  cursor: pointer;
 }
 
 .rated-card:hover {
@@ -32,7 +43,14 @@
 }
 
 .l-heading {
-  margin-bottom: 40px;
+  margin: 40px;
+}
+
+.btn-back {
+  margin: 0 20px;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  background-color:
 }
 
 @media only screen 

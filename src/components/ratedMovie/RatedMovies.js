@@ -55,20 +55,22 @@ function RatedMovies(props) {
   });
 
   return (
-    <div className="ui container">
+    <div className="main-container">
       <div className="l-heading">
-        <Link to="/">
-          <button class="ui right floated button">Back</button>
-        </Link>
-        <h1>Top Rated Movies</h1>
+        <h1 className="rated-header">Top Rated Movies</h1>
       </div>
-      {singleMovie}
-      <div className="pagination">
-        <Pagination
-          onPageChange={(e) => setPage(e.target.outerText)}
-          defaultActivePage={page}
-          totalPages={20}
-        />
+      <div className="rated-movies">
+        {singleMovie}
+        <div className="pagination">
+          <Pagination
+            onPageChange={(e) => setPage(e.target.outerText)}
+            defaultActivePage={page}
+            totalPages={20}
+          />
+          <Link to="/">
+            <button className="btn-back">Back</button>
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -30,7 +30,7 @@ function PopularMovies(props) {
 
   const singleMovie = popularMovies.map((moviePopular) => {
     return (
-      <div className="rated-card">
+      <div className="popular-card">
         <div>
           <div>
             <img
@@ -55,20 +55,20 @@ function PopularMovies(props) {
   });
 
   return (
-    <div className="ui container">
-      <div className="l-heading">
-        <Link to="/">
-          <button class="ui right floated button">Back</button>
-        </Link>
-        <h1>Popular Movies</h1>
+    <div>
+      <div className="title-header">
+        <h1 className="popular-header">Popular Movies</h1>
       </div>
-      {singleMovie}
+      <div className="popular-content">{singleMovie}</div>
       <div className="pagination">
         <Pagination
           onPageChange={(e) => setPage(e.target.outerText)}
           defaultActivePage={page}
           totalPages={20}
         />
+        <Link to="/">
+          <button class="ui right floated button">Back</button>
+        </Link>
       </div>
     </div>
   );

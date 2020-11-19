@@ -1,8 +1,17 @@
-.ui.container {
-  margin-top: 40px;
+.movie-detail-content {
+  padding: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-.img-poster {
+.movie-detail-poster {
+  width: 300px;
+  border-radius: 20px;
+}
+
+.content-detail {
   padding: 0 40px;
 }
 
@@ -29,4 +38,19 @@
 
 .movie-description {
   font-size: 1.2rem;
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) { 
+  .movie-detail-poster {
+    width: 300px;
+    border-radius: 20px;
+  }
+
+  .l-header {
+    font-size: 2.2rem;
+    text-align: center;
+  }
 }

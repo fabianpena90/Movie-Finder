@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Ratings from "../Ratings/Ratings";
 import { Pagination } from "semantic-ui-react";
+import "./NowPlayingMovies.css";
 
 function NowPlayingMovies(props) {
   const [nowPlayingMovies, setNowPlayingMovies] = useState([]);
@@ -29,7 +30,7 @@ function NowPlayingMovies(props) {
 
   const singleMovie = nowPlayingMovies.map((movieNow) => {
     return (
-      <div className="rated-card">
+      <div className="now-card">
         <div>
           <div>
             <img
@@ -54,20 +55,20 @@ function NowPlayingMovies(props) {
   });
 
   return (
-    <div className="ui container">
-      <div className="l-heading">
-        <Link to="/">
-          <button class="ui right floated button">Back</button>
-        </Link>
-        <h1>Now Playing</h1>
+    <div>
+      <div className="title-header">
+        <h1 className="now-header">Now Playing</h1>
       </div>
-      {singleMovie}
+      <div className="now-content">{singleMovie}</div>
       <div className="pagination">
         <Pagination
           onPageChange={(e) => setPage(e.target.outerText)}
           defaultActivePage={page}
           totalPages={20}
         />
+        <Link to="/">
+          <button class="ui right floated button">Back</button>
+        </Link>
       </div>
     </div>
   );

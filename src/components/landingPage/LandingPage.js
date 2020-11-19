@@ -8,7 +8,7 @@ function LandingPage(props) {
     <div className="container">
       <img className="cinema-bg" src="/cinema.jpg" alt="" />
       <div className="home-content">
-        <h1>Welcome to Movie Finder</h1>
+        <h1 className="landing-header">Welcome to Movie Finder</h1>
         {/* <SearchMovie /> */}
         <div className="group-btn">
           <Link to="/ratedMovies">
@@ -43,6 +43,7 @@ function LandingPage(props) {
             <img
               className="buy-coffee"
               src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=fabianpena90&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
+              alt="Buy Me Coffee"
             />
           </a>
         </footer>

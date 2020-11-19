@@ -1,15 +1,26 @@
-.popular-card {
+.upcoming-card {
   padding: 40px;
   transition:all 0.5s ease;
   /* width: 30%; */
   cursor: pointer;
 }
 
-.popular-card:hover {
+.upcoming-card:hover {
   transform:scale(1.1);
 }
 
-.popular-content {
+.upcoming-card {
+  padding: 40px;
+  transition:all 0.5s ease;
+  /* width: 30%; */
+  cursor: pointer;
+}
+
+.upcoming-card:hover {
+  transform:scale(1.1);
+}
+
+.upcoming-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -19,7 +30,11 @@
   padding: 40px;
 }
 
-.popular-header {
+.content h3 {
+  text-align:justify;
+}
+
+.upcoming-header {
   text-align: center;
 }
 
