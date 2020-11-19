@@ -59,18 +59,16 @@ function RatedMovies(props) {
       <div className="l-heading">
         <h1 className="rated-header">Top Rated Movies</h1>
       </div>
-      <div className="rated-movies">
-        {singleMovie}
-        <div className="pagination">
-          <Pagination
-            onPageChange={(e) => setPage(e.target.outerText)}
-            defaultActivePage={page}
-            totalPages={20}
-          />
-          <Link to="/">
-            <button className="btn-back">Back</button>
-          </Link>
-        </div>
+      <div className="rated-movies">{singleMovie}</div>
+      <div className="pagination">
+        <Pagination
+          onPageChange={(e) => setPage(e.target.outerText)}
+          defaultActivePage={page}
+          totalPages={20}
+        />
+        <Link to="/">
+          <button className="btn-back">Back</button>
+        </Link>
       </div>
     </div>
   );
