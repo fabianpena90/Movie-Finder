@@ -1,6 +1,6 @@
 ## Movie Library w/ ReactJS
-http://github.com - automatic!
-[GitHub](https://the-movie-finder.netlify.app/)
+
+[Check it live here!](https://the-movie-finder.netlify.app/)
 
 
 A Movie Library made with ReactJS using The Movie Database API
