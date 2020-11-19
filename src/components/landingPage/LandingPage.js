@@ -35,7 +35,7 @@ function LandingPage(props) {
       </div>
       <div className="footer">
         <footer>
-          Copyright &copy; Fabian Pena{" "}
+          Copyright &copy; Fabian Pena 2020{" "}
           <a href="https://github.com/fabianpena90">
             <i class="github icon"></i>
           </a>
