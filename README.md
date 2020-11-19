@@ -12,18 +12,18 @@ These instructions will get you a copy of the project up and running on your loc
 ## Prerequisites
 You need to create an API KEY in The Movie Database API Create an .env.local file on the root of the project and put your API key
 
-REACT_APP_API=yourapikeyhere
+`REACT_APP_API=yourapikeyhere`
 
 ## Installing
 Clone the Repository and run
 
-npm install
-npm run dev
+`npm install`
+`npm run dev`
 
 ## Deployment
 To deploy simply run
 
-npm run build
+`npm run build`
 
 ## Built With
 * React JS
