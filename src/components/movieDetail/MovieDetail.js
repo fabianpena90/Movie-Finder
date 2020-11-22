@@ -27,7 +27,7 @@ function MovieDetail(props) {
       const res3 = await axios.get(
         `https://api.themoviedb.org/3/movie/${props.match.params.id}/videos?api_key=${key}&language=en-US`
       );
-      setVideo(res3.data.results[0].key);
+      setVideo(res3.data?.results[0]?.key);
     }
     renderMovieDetail();
   }, []);

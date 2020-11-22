@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import SearchMovie from "../searchMovie/SearchMovie";
+import SearchMovie from "../searchMovie/SearchMovie";
 import "./LandigPage.css";
 
 function LandingPage(props) {
@@ -9,25 +9,25 @@ function LandingPage(props) {
       <img className="cinema-bg" src="/cinema.jpg" alt="" />
       <div className="home-content">
         <h1 className="landing-header">Welcome to Movie Finder</h1>
-        {/* <SearchMovie /> */}
+        <SearchMovie />
         <div className="group-btn">
           <Link to="/ratedMovies">
-            <button class="btn-landing">
+            <button className="btn-landing">
               <h3 className="h3-landing">Top Rated Movies</h3>
             </button>
           </Link>
           <Link to="/popularMovies">
-            <button class="btn-landing">
+            <button className="btn-landing">
               <h3 className="h3-landing">Popular Movies</h3>
             </button>
           </Link>
           <Link to="/nowPlaying">
-            <button class="btn-landing">
+            <button className="btn-landing">
               <h3 className="h3-landing">Now Playing</h3>
             </button>
           </Link>
           <Link to="/upcomingMovies">
-            <button class="btn-landing">
+            <button className="btn-landing">
               <h3 className="h3-landing">Upcoming Movies</h3>
             </button>
           </Link>
@@ -37,7 +37,7 @@ function LandingPage(props) {
         <footer>
           Copyright &copy; Fabian Pena 2020{" "}
           <a href="https://github.com/fabianpena90">
-            <i class="github icon"></i>
+            <i className="github icon"></i>
           </a>
           <a href="https://www.buymeacoffee.com/fabianpena90">
             <img

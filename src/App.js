@@ -6,7 +6,7 @@ import PopularMovies from "./components/popularMovies/PopularMovies";
 import NowPlayingMovies from "./components/nowPlaying/NowPlayingMovies";
 import UpcomingMovies from "./components/upcomingMovies/UpcomingMovies";
 import MovieDetail from "./components/movieDetail/MovieDetail";
-// import SearchMovie from "./components/searchMovie/SearchMovie";
+import QueryMovies from "./components/queryMovies/QueryMovies";
 
 function App() {
   return (
@@ -40,6 +40,12 @@ function App() {
           exact
           path="/upcomingMovies/:id"
           render={(props) => <MovieDetail {...props} />}
+        />
+        '
+        <Route
+          exact
+          path="/searchMovies/:id"
+          render={(props) => <QueryMovies {...props} />}
         />
       </Switch>
     </div>

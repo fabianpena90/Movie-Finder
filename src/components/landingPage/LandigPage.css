@@ -4,6 +4,7 @@
 }
 
 .container {
+  /* background: url('/img/cinema.png'); */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -26,10 +27,16 @@
 }
 
 .cinema-bg {
-	position: absolute;
+	/* position: absolute;
 	top: 0%;
 	width: 100vw;
-	height: 100vh;
+  height: 100vh; */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
 }
 
 .home-content {
@@ -187,11 +194,21 @@ and (orientation: portrait) {
 
   .btn-landing {
     margin: 10px 0;
+    background-color: lightcyan;
   }
 
   .h3-landing {
     font-size: 12px;
     font-weight: bold;
+    color: magenta;
+    text-shadow: 
+      0 0 5px rgb(24, 9, 67),
+      0 0 10px rgb(24, 9, 67),
+      0 0 20px rgb(24, 9, 67),
+      0 0 40px rgb(24, 9, 67),
+      0 0 80px rgb(24, 9, 67),
+      0 0 90px rgb(24, 9, 67),
+      0 0 100px rgb(24, 9, 67);
   }
 
   .landing-header {
@@ -204,6 +221,69 @@ and (orientation: portrait) {
   }
   .footer footer {
     font-size: small;
+  }
+
+  @keyframes text-flicker {
+    2% { 
+      color: rgb(230, 0, 120);
+      text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    3% {
+      color: rgba(120, 0, 50, .5);
+      text-shadow: none;
+    }
+    6% {
+      color: rgb(230, 0, 120);
+      text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    9% {
+      color: rgba(120, 0, 50, .5);
+      text-shadow: none;
+    }
+    11% {
+      color: rgb(230, 0, 120);
+      text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    14% {
+      color: rgba(120, 0, 50, .5);
+      text-shadow: none;
+    }
+    18% {
+      color: rgb(230, 0, 120);
+      text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    32% {
+      color: rgb(230, 0, 120);
+      text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    33% {
+      color: rgba(120, 0, 50, .5);
+      text-shadow: none;
+    }
+    37% {
+      color: rgb(230, 0, 120);
+      text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    39% {
+      color: rgba(120, 0, 50, .5);
+      text-shadow: none;
+    }
+    43% {
+      color: rgb(230, 0, 120);
+      text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    46% {
+      color: rgba(120, 0, 50, .5);
+      text-shadow: none;
+    }
+    47% {
+      color: rgb(230, 0, 120);
+      text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
+    100% {
+      color: rgb(230, 0, 120);
+      text-shadow: 0 0 15px rgb(230, 0, 120);
+    }
   }
 }
 
